@@ -77,3 +77,8 @@ if __name__ == "__main__":
     for user in get_users(session):
         print(str(user))
 
+    # I`ve tried to implemet additional task, but after setuping AWS user, Acces Token 
+    # and docker I`ve got some nasty problem. Execution of 'serverless deploy' command gave me
+    # Invalid requirement: '\ "x00'" Error. That was happening because during deploy for some 
+    # reason characters in .serverless\requirements.txt file transormed into chinese ieroglifs :/
+    # I found that not only me faced with this issue, but not any solution worked for me.
